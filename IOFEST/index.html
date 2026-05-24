@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bubur Ayam Sederha Baru</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <header>
+            <nav class="navbar">
+                <h2 class="logo">Bubur Ayam Mas Dimas</h2>
+                <ul class="nav-links">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="product.html">Menu</a></li>
+                    <li><a href="cart.html">Pesanan</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section class="hero">
+            <h1>Bubur Ayam Hangat & Lezat</h1>
+            <p>Dibuat setiap hari dengan bahan segar dan resep sederhana khas rumahan</p>
+            <button onclick="window.location.href='#produk'">Lihat Menu</button>
+        </section>
+
+        <section class="produk" id="produk">
+            <h2>Menu Bubur Ayam</h2>
+
+            <div class="produk-container">
+
+                <div class="card">
+                    <img src="" alt="Bubur Ayam Original">
+                    <h3>Bubur Ayam Original</h3>
+                    <p>Rp 20.000</p>
+                    <button onclick="tambahKeKeranjang('Bubur Ayam Original, 20000')">Pesan</button>
+                </div>
+
+                <div class="card">
+                    <img src="" alt="Es Teh">
+                    <h3>Es Teh</h3>
+                    <p>Rp 5.000</p>
+                    <button onclick="tmabahKeKeranjang('Es Teh, 5000')">Pesan</button>
+                </div>
+
+                <div class="card">
+                    <img src="" alt="Es Jeruk">
+                    <h3>Es Jeruk</h3>
+                    <p>Rp 7.000</p>
+                    <button onclick="tambahKeKeranjang('Es Jeruk, 7000')">Pesan</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="about">
+            <h2>Tentang Kami</h2>
+            <p>
+                Bubur Ayam Sederhan Baru Mas Dimas merupakan UMKM sederhana yang menyediakan
+                bubur ayam hangat dengan cita rasa khas rumahan. Kami berkomitmen 
+                untuk memberikan makanan yang higeinis, enak, dan terjangkau bagi semua kalangan.
+            </p>
+        </section>
+
+        <footer>
+            <p>© Bubur Ayam Sederhan Baru Mas Dimas berdiri sejak 2005</p>
+        </footer>
+
+        <script src="js/product.js"></script>
+    </body>
+</html>

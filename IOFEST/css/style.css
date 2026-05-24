@@ -1,0 +1,135 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdfdfd;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-items: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #ff7f50;
+    color: white;
+}
+
+.logo {
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 50px;
+    background: #fff3e0;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: none;
+    background: white;
+    color: #ff5362;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Produk */
+.produk {
+    padding: 40px;
+    text-align: center;
+}
+
+.produk h2 {
+    margin-bottom: 20px;
+}
+
+.produk-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* Card */
+.card {
+    background: white;
+    border-radius: 10px;
+    width: 220px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card p {
+    color: #ff5e62;
+    font-weight: bold;
+}
+
+.card button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background: #ff7f50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    padding: 40px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #333;
+    color: white;
+    margin-top: 30px;
+}
+
+.about {
+    padding: 30px;
+    background: #f9f9f9;
+    text-align: center;
+}

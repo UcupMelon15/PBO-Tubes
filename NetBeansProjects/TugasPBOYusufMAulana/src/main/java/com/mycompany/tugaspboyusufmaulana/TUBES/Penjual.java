@@ -1,4 +1,4 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -18,4 +18,16 @@ public class Penjual {
         this.id = id;
     }
     
+    public String getNama() {
+        return nama;
+    }
+    
+    public int getId() {
+        return id;
+    }
+    
+    public String tampilData() {
+        return "Nama: " + nama +
+               "Id: " + id ;
+    }
 }

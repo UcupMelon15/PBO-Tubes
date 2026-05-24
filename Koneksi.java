@@ -10,6 +10,7 @@ package com.mycompany.tugaspboyusufmaulana.TUBES;
  */
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 public class Koneksi {
@@ -28,7 +29,7 @@ public class Koneksi {
 
             JOptionPane.showMessageDialog(null, "Koneksi Berhasil");
 
-        } catch (Exception e) {
+        } catch (SQLException e) {
 
             JOptionPane.showMessageDialog(null, "Koneksi Gagal : " + e.getMessage());
 

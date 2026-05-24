@@ -17,6 +17,9 @@ public class GUI_BARKAS extends javax.swing.JFrame {
      */
     public GUI_BARKAS() {
         initComponents();
+        
+        Koneksi k = new Koneksi();
+        k.connect();
     }
 
     /**

@@ -49,6 +49,6 @@ public class Barang {
         this.harga = harga;
         System.out.println("Update harga barang: " + harga);
     }
-    
+    public void tes(){
     
 }

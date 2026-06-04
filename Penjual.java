@@ -8,26 +8,40 @@ package com.mycompany.tugaspboyusufmaulana.TUBES;
  *
  * @author ASUS
  */
-public class Penjual {
+import java.util.ArrayList;
+
+public class Penjual extends Pengguna {
     
-    private String nama;
-    private int id;
+    private int idPenjual;
+    private String namaPenjual;
     
-    public Penjual(String nama, int id) {
-        this.nama = nama;
-        this.id = id;
+    private ArrayList<Barang> daftarBarang;
+    
+    private Penjual(int idPenjual, String namaLengkap, String nomorTelpon, String namaPenjual) {
+       
+        super(idPengguna, namaLengkap, nomorTelpon);
+        
+        this.idPenjual = idPenjual;
+        this.namaPenjual = namaPenjual;
+        
+        daftarBarang = new ArrayList<>();
     }
     
-    public String getNama() {
-        return nama;
+    public void tambahBarang(Barang barang) {
+        daftarBarang.add(barang);
+        
+        System.out.println("Barang berhasil ditambahkan");
     }
     
-    public int getId() {
-        return id;
+    public void listStatusBarang() {
+        for (Barang b : daftarBarang) {
+            
+            System.out.println("Nama Barang : " + b.getNamaBarang());
+            System.out.println("Status      : " + b.getStatusBarang());
+        }
     }
     
-    public String tampilData() {
-        return "Nama: " + nama +
-               "Id: " + id ;
+    public void updateDataPenjual(String namaBaru) {
+        this.namaPenjual = namaBaru;
     }
 }

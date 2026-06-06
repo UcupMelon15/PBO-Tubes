@@ -19,7 +19,7 @@ public class GUI_BARKAS extends javax.swing.JFrame {
         initComponents();
         
         Koneksi k = new Koneksi();
-        k.connect();
+        k.getConnection();
     }
 
     /**

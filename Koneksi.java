@@ -10,31 +10,31 @@ package com.mycompany.tugaspboyusufmaulana.TUBES;
  */
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
-import javax.swing.JOptionPane;
 
 public class Koneksi {
 
-    Connection conn;
+    private static final String URL =
+            "jdbc:mysql://localhost:3306/jual_beli_bekas";
 
-    public Connection connect() {
+    private static final String USER = "root";
+    private static final String PASSWORD = "";
+
+    public static Connection getConnection() {
 
         try {
 
-            String url = "jdbc:mysql://localhost:3306/db_barkas";
-            String user = "root";
-            String pass = "";
+            return DriverManager.getConnection(
+                    URL,
+                    USER,
+                    PASSWORD);
 
-            conn = DriverManager.getConnection(url, user, pass);
+        } catch (Exception e) {
 
-            JOptionPane.showMessageDialog(null, "Koneksi Berhasil");
+            System.out.println(
+                    "Koneksi gagal : "
+                    + e.getMessage());
 
-        } catch (SQLException e) {
-
-            JOptionPane.showMessageDialog(null, "Koneksi Gagal : " + e.getMessage());
-
+            return null;
         }
-
-        return conn;
     }
 }

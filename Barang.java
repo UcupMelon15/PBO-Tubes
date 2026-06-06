@@ -59,6 +59,10 @@ public class Barang {
     public void setStatusBarang(String statusBarang) {
         this.statusBarang = statusBarang;
     }
+    
+    public String getKondisiBarang() {
+        return kondisiBarang;
+    } 
 
     public double getHarga() {
         return harga;

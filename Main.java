@@ -16,10 +16,9 @@ public class Main {
 
         Penjual penjual = new Penjual(
                 1,
-                "UcUp",
+                "Ucup",
                 "08123456789",
-                101,
-                "Toko Ucup"
+                "12345"
         );
 
         Barang barang1 = new Barang(
@@ -36,8 +35,7 @@ public class Main {
                 2,
                 "Budi",
                 "089999999",
-                201,
-                "Budi"
+                "budi123"
         );
 
         pembeli.lihatBarang(barang1);

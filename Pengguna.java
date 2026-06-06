@@ -9,32 +9,38 @@ package com.mycompany.tugaspboyusufmaulana.TUBES;
  * @author ASUS
  */
 public class Pengguna {
-    
+
     protected int idPengguna;
     protected String namaLengkap;
-    protected String nomorTelpon;
-    
-    public Pengguna(int idPengguna, String namaLengkap, String nomorTelpon) {
+    protected String nomorTelepon;
+    protected String password;
+
+    public Pengguna(int idPengguna, String namaLengkap,
+                    String nomorTelepon, String password) {
+        
         this.idPengguna = idPengguna;
         this.namaLengkap = namaLengkap;
-        this.nomorTelpon = nomorTelpon;
+        this.nomorTelepon = nomorTelepon;
+        this.password = password;
     }
-    
     public boolean login() {
-        System.out.println(namaLengkap + " Behasiil  Login");
+        System.out.println(namaLengkap + " berhasil login");
         return true;
     }
-    
     public boolean logout() {
-        System.out.println(namaLengkap + " Berhasil Logout");
+        System.out.println(namaLengkap + " berhasil logout");
         return true;
     }
-    
-    public String getPenjualId() {
-        return "PJ" + idPengguna;
+    public int getIdPengguna() {
+        return idPengguna;
     }
-    
-    public String getNoTelpon() {
-        return nomorTelpon;
+    public String getNamaLengkap() {
+        return namaLengkap;
+    }
+    public String getNomorTelepon() {
+        return nomorTelepon;
+    }
+    public String getPassword() {
+        return password;
     }
 }

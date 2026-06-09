@@ -14,7 +14,7 @@ import java.sql.DriverManager;
 public class Koneksi {
 
     private static final String URL =
-            "jdbc:mysql://localhost:3306/jual_beli_bekas";
+            "jdbc:mysql://localhost:3306/db_barkas";
 
     private static final String USER = "root";
     private static final String PASSWORD = "";

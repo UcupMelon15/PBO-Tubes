@@ -4,10 +4,6 @@
  */
 package com.mycompany.tugaspboyusufmaulana.TUBES;
 
-/**
- *
- * @author ASUS
- */
 public class Barang {
 
     private int idBarang;
@@ -16,6 +12,12 @@ public class Barang {
     private String statusBarang;
     private double harga;
 
+    // Constructor kosong
+    public Barang() {
+
+    }
+
+    // Constructor lengkap
     public Barang(int idBarang,
                   String namaBarang,
                   String kondisiBarang,
@@ -29,27 +31,30 @@ public class Barang {
         this.harga = harga;
     }
 
-    public void getBarang() {
+    // Getter dan Setter
 
-        System.out.println("ID Barang      : " + idBarang);
-        System.out.println("Nama Barang    : " + namaBarang);
-        System.out.println("Kondisi Barang : " + kondisiBarang);
-        System.out.println("Status Barang  : " + statusBarang);
-        System.out.println("Harga Barang   : " + harga);
+    public int getIdBarang() {
+        return idBarang;
     }
 
-    public void updateStatusBarang(String statusBaru) {
-
-        this.statusBarang = statusBaru;
-    }
-
-    public void updateHarga(double hargaBaru) {
-
-        this.harga = hargaBaru;
+    public void setIdBarang(int idBarang) {
+        this.idBarang = idBarang;
     }
 
     public String getNamaBarang() {
         return namaBarang;
+    }
+
+    public void setNamaBarang(String namaBarang) {
+        this.namaBarang = namaBarang;
+    }
+
+    public String getKondisiBarang() {
+        return kondisiBarang;
+    }
+
+    public void setKondisiBarang(String kondisiBarang) {
+        this.kondisiBarang = kondisiBarang;
     }
 
     public String getStatusBarang() {
@@ -59,12 +64,32 @@ public class Barang {
     public void setStatusBarang(String statusBarang) {
         this.statusBarang = statusBarang;
     }
-    
-    public String getKondisiBarang() {
-        return kondisiBarang;
-    } 
 
     public double getHarga() {
         return harga;
+    }
+
+    public void setHarga(double harga) {
+        this.harga = harga;
+    }
+
+    // Method tambahan
+
+    public void getBarang() {
+
+        System.out.println("ID Barang      : " + idBarang);
+        System.out.println("Nama Barang    : " + namaBarang);
+        System.out.println("Kondisi Barang : " + kondisiBarang);
+        System.out.println("Status Barang  : " + statusBarang);
+        System.out.println("Harga Barang   : " + harga);
+
+    }
+
+    public void updateStatusBarang(String statusBaru) {
+        this.statusBarang = statusBaru;
+    }
+
+    public void updateHarga(double hargaBaru) {
+        this.harga = hargaBaru;
     }
 }

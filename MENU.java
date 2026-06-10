@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.tugaspboyusufmaulana.TUBES;
+package com.mycompany.tugaspboyusufmaulana;
 
 /**
  *
@@ -59,12 +59,16 @@ public class MENU extends javax.swing.JFrame {
         jButton1.addActionListener(this::jButton1ActionPerformed);
 
         jButton3.setText("Logout");
+        jButton3.addActionListener(this::jButton3ActionPerformed);
 
         jButton4.setText("Cek Penjual");
+        jButton4.addActionListener(this::jButton4ActionPerformed);
 
         jButton5.setText("Cek Transaksi");
+        jButton5.addActionListener(this::jButton5ActionPerformed);
 
         jButton6.setText("Cek Pembeli");
+        jButton6.addActionListener(this::jButton6ActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -128,6 +132,36 @@ public class MENU extends javax.swing.JFrame {
         Kelola_Barang barang = new Kelola_Barang();
         barang.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+                    int konfirmasi = javax.swing.JOptionPane.showConfirmDialog(this, "Yakin ingin keluar?", "Logout", javax.swing.JOptionPane.YES_NO_OPTION);
+    if (konfirmasi == javax.swing.JOptionPane.YES_OPTION) {
+        LOGIN_PAGE loginPage = new LOGIN_PAGE();
+        loginPage.setVisible(true);
+
+        // Baris di bawah ini adalah cara paling kuat (bulletproof) untuk menghindari error "dispose".
+        // Ia akan mencari Jendela (Window/Frame) yang membungkus komponen ini, lalu menutupnya.
+        java.awt.Window win = javax.swing.SwingUtilities.getWindowAncestor((java.awt.Component) evt.getSource());
+        if (win != null) {
+            win.dispose();
+        }
+    }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        LandingPage_Penjual penjual = new LandingPage_Penjual();
+        penjual.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        LandingPage_Pembeli pembeli = new LandingPage_Pembeli();
+        pembeli.setVisible(true);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        LandingPage_Transaksi transaksi = new LandingPage_Transaksi();
+        transaksi.setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.tugaspboyusufmaulana.TUBES;
+package com.mycompany.tugaspboyusufmaulana;
 
 /**
  *
@@ -48,11 +48,13 @@ public class REGISTER_PAGE extends javax.swing.JFrame {
         jLabel3.setText("Username");
 
         jButton1.setText("SAVE");
+        jButton1.addActionListener(this::jButton1ActionPerformed);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel4.setText("REGISTER PAGE");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Penjual", "Pembeli" }));
+        jComboBox1.addActionListener(this::jComboBox1ActionPerformed);
 
         jLabel5.setText("Password");
 
@@ -116,6 +118,15 @@ public class REGISTER_PAGE extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        LOGIN_PAGE login = new LOGIN_PAGE();
+        login.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

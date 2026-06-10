@@ -65,6 +65,7 @@ public class MENU extends javax.swing.JFrame {
         jButton4.addActionListener(this::jButton4ActionPerformed);
 
         jButton5.setText("Cek Transaksi");
+        jButton5.addActionListener(this::jButton5ActionPerformed);
 
         jButton6.setText("Cek Pembeli");
         jButton6.addActionListener(this::jButton6ActionPerformed);
@@ -156,6 +157,11 @@ public class MENU extends javax.swing.JFrame {
         LandingPage_Pembeli pembeli = new LandingPage_Pembeli();
         pembeli.setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        LandingPage_Transaksi transaksi = new LandingPage_Transaksi();
+        transaksi.setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments

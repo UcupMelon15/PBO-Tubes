@@ -100,6 +100,7 @@ private void tampilData() {
         jLabel4.setText("Kelola Barang");
 
         jButton1.setText("Tambah");
+        jButton1.addActionListener(this::jButton1ActionPerformed);
 
         jButton2.setText("Reset");
         jButton2.addActionListener(this::jButton2ActionPerformed);
@@ -280,6 +281,10 @@ private void tampilData() {
 
     idBarangTerpilih = -1;
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

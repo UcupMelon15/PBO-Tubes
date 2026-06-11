@@ -109,8 +109,60 @@ public class LOGIN_PAGE extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        MENU menu = new MENU();
-        menu.setVisible(true);
+    String username = jTextField3.getText();
+    String password = jTextField4.getText();
+
+try {
+    Connection conn = Koneksi.getConnection();
+
+    String sql =
+        "SELECT role FROM pengguna WHERE username=? AND password=?";
+
+    PreparedStatement pst =
+        conn.prepareStatement(sql);
+
+    pst.setString(1, username);
+    pst.setString(2, password);
+
+    ResultSet rs = pst.executeQuery();
+
+    if(rs.next()) {
+
+        String role = rs.getString("role");
+
+        if(role.equals("penjual")) {
+
+            LandingPage_Penjual lp =
+                new LandingPage_Penjual();
+
+            lp.setVisible(true);
+
+        } else if(role.equals("pembeli")) {
+
+            LandingPage_Pembeli lp =
+                new LandingPage_Pembeli();
+
+            lp.setVisible(true);
+
+        }
+
+        this.dispose();
+
+    } else {
+
+        JOptionPane.showMessageDialog(
+            this,
+            "Username atau Password Salah!"
+        );
+    }
+
+} catch(Exception e) {
+
+    JOptionPane.showMessageDialog(
+        this,
+        e.getMessage()
+    );
+}
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

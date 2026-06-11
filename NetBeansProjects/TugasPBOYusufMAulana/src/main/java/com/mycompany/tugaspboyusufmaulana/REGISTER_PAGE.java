@@ -8,6 +8,10 @@ package com.mycompany.tugaspboyusufmaulana;
  *
  * @author ASUS
  */
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
+
 public class REGISTER_PAGE extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(REGISTER_PAGE.class.getName());
@@ -40,6 +44,8 @@ public class REGISTER_PAGE extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jTextField1.addActionListener(this::jTextField1ActionPerformed);
 
         jLabel1.setText("Nama");
 
@@ -124,9 +130,42 @@ public class REGISTER_PAGE extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String nama = jTextField1.getText();
+    String username = jTextField3.getText();
+    String password = jTextField2.getText();
+    String role = jComboBox1.getSelectedItem().toString();
+
+    try {
+        Connection conn = Koneksi.getConnection();
+
+        String sql = "INSERT INTO pengguna(nama, username, password, role) VALUES (?, ?, ?, ?)";
+
+        PreparedStatement pst = conn.prepareStatement(sql);
+
+        pst.setString(1, nama);
+        pst.setString(2, username);
+        pst.setString(3, password);
+        pst.setString(4, role);
+        
+        System.out.println(nama);
+        pst.executeUpdate();
+
+        JOptionPane.showMessageDialog(this,
+                "Registrasi Berhasil!");
+
         LOGIN_PAGE login = new LOGIN_PAGE();
         login.setVisible(true);
+        this.dispose();
+
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this,
+                e.getMessage());
+    }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments

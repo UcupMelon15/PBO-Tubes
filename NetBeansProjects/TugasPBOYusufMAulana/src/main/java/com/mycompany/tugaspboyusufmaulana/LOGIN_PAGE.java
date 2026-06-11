@@ -111,6 +111,17 @@ public class LOGIN_PAGE extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     String username = jTextField3.getText();
     String password = jTextField4.getText();
+    
+    if(username.equals("admin")
+        && password.equals("admin123")) {
+
+    LandingPage_ConsignmentSeller admin =
+            new LandingPage_ConsignmentSeller();
+
+    admin.setVisible(true);
+    this.dispose();
+    return;
+}
 
 try {
     Connection conn = Koneksi.getConnection();

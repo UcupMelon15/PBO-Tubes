@@ -133,7 +133,7 @@ private void tampilData() {
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bekas", "Baru" }));
 
-        btnLogout.setText("Logout");
+        btnLogout.setText("Kembali");
         btnLogout.addActionListener(this::btnLogoutActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -171,7 +171,7 @@ private void tampilData() {
                         .addComponent(jButton2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnLogout)))
-                .addContainerGap(465, Short.MAX_VALUE))
+                .addContainerGap(404, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -239,18 +239,22 @@ private void tampilData() {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
-            int konfirmasi = javax.swing.JOptionPane.showConfirmDialog(this, "Yakin ingin keluar?", "Logout", javax.swing.JOptionPane.YES_NO_OPTION);
-    if (konfirmasi == javax.swing.JOptionPane.YES_OPTION) {
-        LOGIN_PAGE loginPage = new LOGIN_PAGE();
-        loginPage.setVisible(true);
+    int konfirmasi = javax.swing.JOptionPane.showConfirmDialog(
+            this,
+            "Kembali ke menu penjual?",
+            "Konfirmasi",
+            javax.swing.JOptionPane.YES_NO_OPTION);
 
-        // Baris di bawah ini adalah cara paling kuat (bulletproof) untuk menghindari error "dispose".
-        // Ia akan mencari Jendela (Window/Frame) yang membungkus komponen ini, lalu menutupnya.
-        java.awt.Window win = javax.swing.SwingUtilities.getWindowAncestor((java.awt.Component) evt.getSource());
-        if (win != null) {
-            win.dispose();
-        }
+    if (konfirmasi == javax.swing.JOptionPane.YES_OPTION) {
+
+        LandingPage_Penjual menu =
+                new LandingPage_Penjual();
+
+        menu.setVisible(true);
+
+        this.dispose();
     }
+
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked

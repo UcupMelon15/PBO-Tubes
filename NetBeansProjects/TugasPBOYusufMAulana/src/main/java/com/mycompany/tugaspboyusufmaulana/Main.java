@@ -12,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        MENU menu = new MENU();
+        LandingPage_ConsignmentSeller menu = new LandingPage_ConsignmentSeller();
         menu.setVisible(true);
  }
 }

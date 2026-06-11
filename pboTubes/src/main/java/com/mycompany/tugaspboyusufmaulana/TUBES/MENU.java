@@ -43,7 +43,7 @@ public class MENU extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel1.setText("MENU");
+        jLabel1.setText("MENU ADMIN");
 
         jLabel2.setText("Barang");
 
@@ -94,7 +94,7 @@ public class MENU extends javax.swing.JFrame {
                             .addComponent(jButton5)
                             .addComponent(jButton3)
                             .addComponent(jButton1))))
-                .addContainerGap(514, Short.MAX_VALUE))
+                .addContainerGap(423, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
